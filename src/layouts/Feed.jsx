@@ -63,6 +63,8 @@ function Feed() {
     setInput(e.target.value);
   };
 
+
+  console.log(posts)
   return (
     <div className="feed">
       <div className="feed-input-container">

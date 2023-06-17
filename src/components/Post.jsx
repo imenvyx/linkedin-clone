@@ -1,4 +1,4 @@
-import React ,{forwardRef} from "react";
+import React, { forwardRef } from "react";
 import "./post.css";
 import { Avatar } from "@mui/material";
 import InputOption from "./InputOption";
@@ -9,12 +9,12 @@ import {
   ThumbUpAltOutlined,
 } from "@mui/icons-material";
 
-
 const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
+  console.log(name);
   return (
     <div ref={ref} className="post">
       <div className="post-header">
-        <Avatar src={photoUrl}>{name[0]} </Avatar>
+        <Avatar src={photoUrl}>{name ? name[0] : null} </Avatar>
         <div className="post-info">
           <h2>{name}</h2>
           <p>{description}</p>
